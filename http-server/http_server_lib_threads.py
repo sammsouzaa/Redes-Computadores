@@ -1,4 +1,3 @@
-
 ##Importamos uma biblioteca que ja cria o http server
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from socketserver import ThreadingMixIn
@@ -17,7 +16,6 @@ class Handler(BaseHTTPRequestHandler):
         ##Resṕonde com esse 'conteudo':
 
         content = '''
-        
         <html> 
             <head>
                 <title>
@@ -27,12 +25,10 @@ class Handler(BaseHTTPRequestHandler):
             <body> 
                 <h1> IFPR - Campus Cascavel </h1>
                 <p> Programando alegremente </p>
-                <p><input> hello</input> </p>
+                <p><input> </input> </p>
             </body> 
         </html>
-        
         '''
-
         self.wfile.write(bytes(content, 'utf-8'))
         return
 
