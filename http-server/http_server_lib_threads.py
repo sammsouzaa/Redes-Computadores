@@ -16,18 +16,31 @@ class Handler(BaseHTTPRequestHandler):
         ##Resṕonde com esse 'conteudo':
 
         content = '''
-        <html> 
-            <head>
-                <title>
-                    Aula-Redes
-                </title>
-            </head>
-            <body> 
-                <h1> IFPR - Campus Cascavel </h1>
-                <p> Programando alegremente </p>
-                <p><input> </input> </p>
-            </body> 
-        </html>
+<html lang="pt-br">
+<head>
+   <title>Primeira Pagina</title>
+</head>
+<body>
+       <!--
+           comentarios de códigos html
+       -->
+   <header>
+       <nav>
+           <p> IFPR - Campus Cascavel </p>
+           
+           <ul>
+               <li> <a href="#estudeaqui">Estude aqui</a></li>
+               <li> <a href="#contato">Contato</a></li>
+           </ul>
+       </nav>
+       <div>
+           <h1> IFPR </h1>
+           <p> Venha nos conhecer e estudar conosco: </p>
+           <button id="sabermais"> Saiba mais </button>
+       </div>
+   </header>
+</body>
+</html>
         '''
         self.wfile.write(bytes(content, 'utf-8'))
         return
