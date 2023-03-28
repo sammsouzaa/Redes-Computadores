@@ -1,0 +1,12 @@
+ssh -p 2222 samu@localhost
+
+docker pull darlon/ssh
+
+docker run -rm -d -name ssh -p 2222:22 darlon/ssh
+
+docker run --rm -d --name ssh -p 2222:22 darlon/ssh
+docker ps
+
+scp -P 2222 hehe.jpg_large samu@192.168.246.55:/tmp/
+
+ssh -p 2222 samu@localhost
