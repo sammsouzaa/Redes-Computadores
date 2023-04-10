@@ -10,6 +10,6 @@ scp -P 2222 /home/aluno/redes/hehe.jpg samu@localhost:/tmp/ //coloca o arquivo d
 
 ls /tmp //mostra os arquivos existentes dentro do tmp
 
-scp -P 2222 /tmp hehe.jpg samu@192.168.246.55:/tmp/ //copia o arquivo dentro de um ssh para outro ssh
+scp -P 2222 /tmp/hehe.jpg samu@192.168.246.55:/tmp/hehe.jpg //copia o arquivo dentro de um ssh para outro ssh
 
 scp -P 2222 samu@192.168.246.60:/tmp/mosquito.jpg . //dentro da maquina pc, faz download de um arquivo dentro de um servidor ssh
