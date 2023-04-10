@@ -1,5 +1,5 @@
 ## Puxa os arquivos do ssh do darlon:
-- (codigo usado de dentro do maquina normal)
+- (comando usado de dentro do maquina normal)
 ```
 docker pull darlon/ssh 
 ```
