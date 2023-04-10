@@ -1,11 +1,15 @@
-docker pull darlon/ssh
+docker pull darlon/ssh //puxa os arquivos do ssh do darlon
 
-docker run --rm -d --name ssh -p 2222:22 darlon/ssh
+docker run --rm -d --name ssh -p 2222:22 darlon/ssh //cria um servidor ssh rodando na maquina
 
-docker ps
+docker ps //verifica se o servidor ssh esta rodando
 
-ssh -p 2222 samu@localhost
+ssh -p 2222 samu@localhost //entra dentro do servidor ssh
 
-scp -P 2222 hehe.jpg_large samu@192.168.246.55:/tmp/
+scp -P 2222 /home/aluno/redes/hehe.jpg samu@localhost:/tmp/ //coloca o arquivo dentro do servidor ssh
 
-ssh -p 2222 samu@localhost
+ls /tmp //mostra os arquivos existentes dentro do tmp
+
+scp -P 2222 /tmp hehe.jpg samu@192.168.246.55:/tmp/ //copia o arquivo dentro de um ssh para outro ssh
+
+scp -P 2222 samu@192.168.246.60:/tmp/mosquito.jpg . //dentro da maquina pc, faz download de um arquivo dentro de um servidor ssh
